@@ -45,7 +45,7 @@ fun MainScreen() {
     Column(Modifier.fillMaxSize().background(Color(0xFFF8F6F2)).padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
         Spacer(Modifier.height(40.dp))
         Text("Daily Inspiration", fontSize = 14.sp, fontWeight = FontWeight.Medium,
-             color = MaterialTheme.colorScheme.onMaterialTheme.colorScheme.surfaceVariant, letterSpacing = 2.sp)
+             color = MaterialTheme.colorScheme.MaterialTheme.colorScheme.oncolorScheme.surfaceVariant, letterSpacing = 2.sp)
         Spacer(Modifier.height(40.dp))
         Card(shape = RoundedCornerShape(24.dp), colors = CardDefaults.cardColors(containerColor = Color.White),
               elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
@@ -53,7 +53,7 @@ fun MainScreen() {
                 Text("\"", fontSize = 48.sp, color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Bold)
                 Text(quotes[index].first, fontSize = 18.sp, lineHeight = 30.sp, textAlign = TextAlign.Start)
                 Spacer(Modifier.height(16.dp))
-                Text("— {quotes[index].second}", fontSize = 14.sp, color = MaterialTheme.colorScheme.onMaterialTheme.colorScheme.surfaceVariant, textAlign = TextAlign.End, modifier = Modifier.fillMaxWidth())
+                Text("— {quotes[index].second}", fontSize = 14.sp, color = MaterialTheme.colorScheme.MaterialTheme.colorScheme.oncolorScheme.surfaceVariant, textAlign = TextAlign.End, modifier = Modifier.fillMaxWidth())
             }
         }
         Spacer(Modifier.height(24.dp))
@@ -74,7 +74,7 @@ fun MainScreen() {
             Text("Favorites ({favorites.size})", fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
             Spacer(Modifier.height(8.dp))
             favorites.takeLast(3).forEach { q ->
-                Text(q.first.take(50) + "...", fontSize = 12.sp, color = MaterialTheme.colorScheme.onMaterialTheme.colorScheme.surfaceVariant)
+                Text(q.first.take(50) + "...", fontSize = 12.sp, color = MaterialTheme.colorScheme.MaterialTheme.colorScheme.oncolorScheme.surfaceVariant)
             }
         }
     }
