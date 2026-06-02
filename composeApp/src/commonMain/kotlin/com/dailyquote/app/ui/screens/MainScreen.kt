@@ -36,6 +36,7 @@ val quotes = listOf(
 )
 
 @Composable
+@OptIn(ExperimentalMaterial3Api::class)
 fun MainScreen() {
     var index by remember { mutableIntStateOf(Random.nextInt(quotes.size)) }
     var isFavorited by remember { mutableStateOf(false) }
